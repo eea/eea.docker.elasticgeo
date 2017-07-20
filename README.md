@@ -1,4 +1,4 @@
-# eea.docker.elasticgeo
+# eea.docker.geoserver
 
 Geoserver with elasticgeo data source package installed.
 
