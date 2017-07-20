@@ -1,13 +1,13 @@
-FROM oscarfonts/geoserver
+FROM oscarfonts/geoserver:2.11.0
 
 MAINTAINER michimau <mauro.michielon@eea.europa.eu>
 
-RUN wget https://github.com/ngageoint/elasticgeo/releases/download/2.9.1-RC1/elasticgeo2.9.1-RC1-gs2.9.1-es2.2.2.zip
+RUN wget https://github.com/ngageoint/elasticgeo/releases/download/2.11.0-RC1/elasticgeo-2.11.0.zip
 
-RUN unzip elasticgeo2.9.1-RC1-gs2.9.1-es2.2.2.zip
+RUN unzip elasticgeo-2.11.0.zip
 
 RUN mv guava-18.0.jar /usr/local/geoserver/WEB-INF/lib/
-RUN mv elasticgeo2.9.1-RC1-gs2.9.1-es2.2.2.jar /usr/local/geoserver/WEB-INF/lib/
+RUN mv elasticgeo-2.11.0.jar /usr/local/geoserver/WEB-INF/lib/
 RUN rm /usr/local/geoserver/WEB-INF/lib/guava-17.0.jar
 
 EXPOSE 8080
