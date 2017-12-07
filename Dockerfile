@@ -11,4 +11,7 @@ RUN rm /usr/local/geoserver/WEB-INF/lib/postgresql-*.jar
 RUN wget https://github.com/locationtech/geogig/releases/download/v1.2.0/geoserver-2.12-SNAPSHOT-geogig-plugin.zip -O geogig-plugin.zip
 RUN unzip -o geogig-plugin.zip -d /usr/local/geoserver/WEB-INF/lib/
 
+RUN wget https://sourceforge.net/projects/geoserver/files/GeoServer/2.12.1/extensions/geoserver-2.12.1-cas-plugin.zip/download -O cas-plugin.zip
+RUN unzip -o cas-plugin.zip -d /usr/local/geoserver/WEB-INF/lib/
+
 EXPOSE 8080
